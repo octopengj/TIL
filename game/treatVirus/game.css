@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 70vw;
+  background: yellow;
+  overflow: hidden;
+}
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(80vh);
+  }
+}
+.virus {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  animation: move infinite alternate;
+}
+.virus.a {
+  left: 10%;
+  bottom: 100%;
+  background-image: url(./images/virus1.png);
+  animation-duration: 5s;
+}
+.virus.b {
+  left: 20%;
+  bottom: 70%;
+  background-image: url(./images/virus2.png);
+  animation-duration: 5s;
+}
+.virus.c {
+  left: 30%;
+  bottom: 60%;
+  background-image: url(./images/virus3.png);
+  animation-duration: 4s;
+}
+.virus.d {
+  left: 40%;
+  bottom: 50%;
+  background-image: url(./images/virus4.png);
+  animation-duration: 3s;
+}
+.virus.e {
+  left: 50%;
+  bottom: 40%;
+  background-image: url(./images/virus5.png);
+  animation-duration: 3s;
+}
+.virus.e {
+  left: 60%;
+  bottom: 30%;
+  background-image: url(./images/virus1.png);
+  animation-duration: 2s;
+}
+.virus.e {
+  left: 70%;
+  bottom: 20%;
+  background-image: url(./images/virus2.png);
+  animation-duration: 2s;
+}
