@@ -2,16 +2,24 @@
   const stageElem = document.querySelector(".stage");
   let currentItem;
 
+  function activate(elem) {
+    elem.classList.add("door-opened");
+    currentItem = elem;
+  }
+
+  function inactivate(elem) {
+    elem.classList.remove("door-opened");
+  }
+
   function eventHnadler(e) {
     const targetElem = e.target;
 
     if (currentItem) {
-      currentItem.classList.remove("door-opened");
+      inactivate(currentItem);
     }
 
     if (targetElem.classList.contains("door-body")) {
-      targetElem.parentNode.classList.add("door-opened");
-      currentItem = targetElem.parentNode;
+      activate(targetElem.parentNode);
     }
   }
 
