@@ -1,0 +1,20 @@
+@keyframes ani {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(300px, 300px);
+  }
+}
+.ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: red;
+}
+.ball.move {
+  border: 5px solid blue;
+}
