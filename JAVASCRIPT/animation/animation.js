@@ -7,3 +7,6 @@ ballElem.addEventListener("click", function () {
 ballElem.addEventListener("animationend", function () {
   ballElem.classList.add("move");
 });
+
+//animationstart
+//animationend
