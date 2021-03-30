@@ -1,0 +1,20 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: yellow;
+}
+
+.ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: red;
+  transition: 1s;
+  /* margin: -15px 0 0 -15px; */ /*JS코드에 직접 입력*/
+}
+.ball.move {
+  background: blue;
+}
