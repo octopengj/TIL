@@ -1,0 +1,27 @@
+img {
+  max-width: 100%;
+}
+.content {
+  height: 1000vh;
+  padding: 20%;
+  background: skyblue;
+}
+.output {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 200;
+  color: yellowgreen;
+  background: rgba(0, 0, 0, 0.4);
+}
+.emoji {
+  display: flex;
+  width: 100px;
+  margin: 20px auto;
+  transition: 1s;
+}
+.emoji.zoom {
+  transform: scale(2);
+}
