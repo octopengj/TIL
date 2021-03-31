@@ -35,7 +35,7 @@ function Character(info) {
   this.scrollState = false; //default값이 false이나 명시
   this.lastScrollTop = 0;
   this.xPos = info.xPos;
-  this.speed = 0.3;
+  this.speed = info.speed;
   this.direction;
   //좌우 이동 중인지 아닌지
   this.runningState = false;

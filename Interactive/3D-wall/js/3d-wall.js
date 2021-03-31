@@ -30,6 +30,7 @@
   stageElem.addEventListener("click", function (e) {
     new Character({
       xPos: (e.clientX / window.innerWidth) * 100,
+      speed: Math.random() * 0.3 + 0.2, //random값 0부터 1사이 랜덤 +0.2로 최소값설정
     });
   });
 
