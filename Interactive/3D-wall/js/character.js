@@ -33,6 +33,7 @@ function Character(info) {
   this.mainElem.style.left = info.xPos + "%";
   //스크롤 중인지 아닌지
   this.scrollState = false; //default값이 false이나 명시
+  this.lastScrollTop = 0;
   this.init();
 }
 
@@ -52,6 +53,17 @@ Character.prototype = {
         self.scrollState = false;
         self.mainElem.classList.remove("running");
       }, 500);
+
+      // 이전 스크롤 위치와 현재 스크롤 위치 비교
+      if (self.lastScrollTop > pageYOffset) {
+        // 이전 스크롤 위치가 크다 -> 스크롤 올림
+        self.mainElem.setAttribute("data-direction", "backward");
+      } else {
+        // 현재 스크롤 위치가 크다 -> 스크롤 내림
+        self.mainElem.setAttribute("data-direction", "forward");
+      }
+
+      self.lastScrollTop = pageYOffset;
     });
   },
 };
