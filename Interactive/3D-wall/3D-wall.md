@@ -86,7 +86,34 @@
     
     ```
 
+  - scroll 위치 비교
+
+    ```javascript
+    this.lastScroll = 0;
     
+    window.addEventListener('scroll', function() {
+    if (lastScroll > pageYOffset) {
+    } else {
+    }
+    lastScroll = pageYOffset;
+    });
+    ```
+
+  - 키보드값
+
+    ```javascript
+    window.addEventListener('keydown', function(){
+    
+    })
+    
+    window.addEventListener('keyup', function() {
+    
+    })
+    ```
+
+    
+
+
 
 - HTML
 

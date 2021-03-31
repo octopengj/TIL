@@ -65,5 +65,19 @@ Character.prototype = {
 
       self.lastScrollTop = pageYOffset;
     });
+
+    window.addEventListener("keydown", function (e) {
+      if (e.keyCode == 37) {
+        self.mainElem.setAttribute("data-direction", "left");
+        self.mainElem.classList.add("running");
+      } else if (e.keyCode == 39) {
+        self.mainElem.setAttribute("data-direction", "right");
+        self.mainElem.classList.add("running");
+      }
+    });
+
+    window.addEventListener("keyup", function () {
+      self.mainElem.classList.remove("running");
+    });
   },
 };
